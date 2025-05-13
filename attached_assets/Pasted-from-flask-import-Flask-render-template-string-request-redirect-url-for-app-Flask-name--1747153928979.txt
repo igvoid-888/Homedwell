@@ -1,0 +1,302 @@
+from flask import Flask, render_template_string, request, redirect, url_for
+
+app = Flask(__name__)
+
+landing_page_html = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Society Management System Demo</title>
+  <style>
+    /* Reset and base styles */
+    body, h1, h2, h3, p, ul, li, a {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+    body {
+      line-height: 1.6;
+      background: #f4f4f4;
+    }
+    a {
+      text-decoration: none;
+      color: #007BFF;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      overflow: hidden;
+      padding: 20px;
+      background: #fff;
+    }
+    /* Hero Section */
+    .hero {
+      background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+    .btn {
+      padding: 15px 30px;
+      background: #007BFF;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 1em;
+      border-radius: 5px;
+      margin: 5px;
+    }
+    /* Section Styles */
+    section {
+      padding: 60px 0;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .features, .testimonials {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .feature-item, .testimonial-item {
+      flex: 0 0 48%;
+      background: #f9f9f9;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    .feature-item h3, .testimonial-item h3 {
+      margin-bottom: 10px;
+    }
+    .how-it-works {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .how-item {
+      flex: 0 0 30%;
+      text-align: center;
+      padding: 20px;
+    }
+    /* Modal Styles */
+    .modal {
+      display: none; 
+      position: fixed; 
+      z-index: 1; 
+      left: 0;
+      top: 0;
+      width: 100%; 
+      height: 100%; 
+      overflow: auto; 
+      background-color: rgba(0,0,0,0.5); 
+    }
+    .modal-content {
+      background-color: #fefefe;
+      margin: 10% auto; 
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 500px;
+      border-radius: 10px;
+    }
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+    @media(max-width: 768px) {
+      .feature-item, .testimonial-item {
+        flex: 0 0 100%;
+      }
+      .how-item {
+        flex: 0 0 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Revolutionize Society Management</h1>
+    <p>Experience streamlined financial oversight, maintenance management, resident communication, and robust security in one integrated platform.</p>
+    <button class="btn" onclick="openDemo()">Watch Demo</button>
+  </header>
+
+  <!-- Overview Section -->
+  <section class="container">
+    <div class="section-title">
+      <h2>Welcome to the Future of Community Management</h2>
+      <p>Our cutting-edge platform automates routine tasks, simplifies communication, and provides transparency across all society operations.</p>
+    </div>
+    <ul>
+      <li><strong>Efficiency:</strong> Automate fee collection and maintenance requests.</li>
+      <li><strong>Transparency:</strong> Real-time financial tracking and document sharing.</li>
+      <li><strong>Communication:</strong> Instant notifications and resident feedback tools.</li>
+      <li><strong>Enhanced Security:</strong> Advanced visitor management and emergency protocols.</li>
+    </ul>
+  </section>
+
+  <!-- Features Demo Section -->
+  <section class="container">
+    <div class="section-title">
+      <h2>Interactive Demo Highlights</h2>
+    </div>
+    <div class="features">
+      <div class="feature-item">
+        <h3>Account & Documentation Management</h3>
+        <p>View a user-friendly dashboard for fee payments and document access, ensuring transparency and ease of use.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Maintenance & Repair Services</h3>
+        <p>Track repair requests and preventive maintenance schedules, reducing downtime and enhancing service quality.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Financial Management</h3>
+        <p>Access budgeting tools, real-time expense tracking, and detailed financial reports for a complete overview.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Resident Communication & Portal</h3>
+        <p>Stay informed with our dynamic notice board, live chat, and an online portal for all society interactions.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Compliance & Security Management</h3>
+        <p>Manage legal compliance, conflict resolution, and advanced visitor management systems seamlessly.</p>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 30px;">
+      <button class="btn" onclick="openDemo()">Explore Interactive Demo</button>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="container">
+    <div class="section-title">
+      <h2>How It Works</h2>
+      <p>Our platform is designed to be intuitive for every stakeholder.</p>
+    </div>
+    <div class="how-it-works">
+      <div class="how-item">
+        <h3>Residents</h3>
+        <p>Access payment portals, document repositories, and service requests with ease.</p>
+      </div>
+      <div class="how-item">
+        <h3>Administrators</h3>
+        <p>Manage users, vendors, and finances through role-based dashboards and analytics.</p>
+      </div>
+      <div class="how-item">
+        <h3>Security Teams</h3>
+        <p>Utilize advanced visitor verification, real-time alerts, and GPS tracking for enhanced safety.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="container">
+    <div class="section-title">
+      <h2>What Our Users Say</h2>
+    </div>
+    <div class="testimonials">
+      <div class="testimonial-item">
+        <h3>Society President</h3>
+        <p>"Since integrating this platform, our management processes have become far more transparent and efficient. Residents appreciate the easy access to information."</p>
+      </div>
+      <div class="testimonial-item">
+        <h3>Property Manager</h3>
+        <p>"Managing maintenance requests and vendor coordination has never been simpler. This demo convinced us that this is the future of society management."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="container" style="text-align: center;">
+    <button class="btn" onclick="openForm()">Get in Touch</button>
+  </section>
+
+  <!-- Contact Form Modal -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeForm()">&times;</span>
+      <h2>Contact Us</h2>
+      <form action="/submit" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required style="width: 100%; padding: 8px;"><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required style="width: 100%; padding: 8px;"><br><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required style="width: 100%; padding: 8px;"></textarea><br><br>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Homedwell Properties | Society Management System</p>
+    <p><a href="#">Contact Us</a> | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+  </footer>
+
+  <script>
+    function openDemo() {
+      alert("Demo video will open here.");
+    }
+    function openForm() {
+      document.getElementById('contactModal').style.display = 'block';
+    }
+    function closeForm() {
+      document.getElementById('contactModal').style.display = 'none';
+    }
+    // Close the modal when clicking outside of it
+    window.onclick = function(event) {
+      var modal = document.getElementById('contactModal');
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
+"""
+
+@app.route('/')
+def landing_page():
+    return render_template_string(landing_page_html)
+
+@app.route('/submit', methods=['POST'])
+def submit_form():
+    # Here, you can process the form data as needed.
+    # For now, we'll simply print it and redirect to the landing page.
+    name = request.form.get('name')
+    email = request.form.get('email')
+    message = request.form.get('message')
+    print("Received form submission:", name, email, message)
+    return redirect(url_for('landing_page'))
+
+if __name__ == '__main__':
+    app.run(debug=True)
