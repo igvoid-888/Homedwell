@@ -1,0 +1,391 @@
+{% extends "base.html" %}
+
+{% block title %}Homedwell - Society Management System{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero d-flex align-items-center text-white text-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 animate-on-scroll">
+                <h1 class="display-3 fw-bold mb-4">Revolutionize Society Management</h1>
+                <p class="lead mb-5">Experience streamlined financial oversight, maintenance management, resident communication, and robust security in one integrated platform.</p>
+                <div class="d-flex justify-content-center flex-wrap gap-3">
+                    <button class="btn btn-primary btn-lg" id="demoVideoButton">
+                        <i class="fas fa-play-circle me-2"></i>Watch Demo
+                    </button>
+                    <a href="#features" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-info-circle me-2"></i>Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Overview Section -->
+<section class="py-5" id="overview">
+    <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-8 animate-on-scroll">
+                <h2 class="display-5 fw-bold mb-3">Welcome to the Future of Community Management</h2>
+                <p class="lead text-muted">Our cutting-edge platform automates routine tasks, simplifies communication, and provides transparency across all society operations.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100 border-0 shadow-sm animate-on-scroll">
+                    <div class="card-body text-center p-4">
+                        <div class="icon-box mb-3">
+                            <i class="fas fa-tachometer-alt text-primary fa-3x"></i>
+                        </div>
+                        <h3 class="h5 card-title">Efficiency</h3>
+                        <p class="card-text text-muted">Automate fee collection and maintenance requests to save time.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100 border-0 shadow-sm animate-on-scroll">
+                    <div class="card-body text-center p-4">
+                        <div class="icon-box mb-3">
+                            <i class="fas fa-chart-line text-primary fa-3x"></i>
+                        </div>
+                        <h3 class="h5 card-title">Transparency</h3>
+                        <p class="card-text text-muted">Real-time financial tracking and document sharing for trust.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100 border-0 shadow-sm animate-on-scroll">
+                    <div class="card-body text-center p-4">
+                        <div class="icon-box mb-3">
+                            <i class="fas fa-comments text-primary fa-3x"></i>
+                        </div>
+                        <h3 class="h5 card-title">Communication</h3>
+                        <p class="card-text text-muted">Instant notifications and resident feedback tools for better engagement.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100 border-0 shadow-sm animate-on-scroll">
+                    <div class="card-body text-center p-4">
+                        <div class="icon-box mb-3">
+                            <i class="fas fa-shield-alt text-primary fa-3x"></i>
+                        </div>
+                        <h3 class="h5 card-title">Enhanced Security</h3>
+                        <p class="card-text text-muted">Advanced visitor management and emergency protocols for safety.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Demo Section -->
+<section class="bg-light py-5" id="features">
+    <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-8 animate-on-scroll">
+                <h2 class="display-5 fw-bold mb-3">Interactive Demo Highlights</h2>
+                <p class="lead text-muted">Explore our key features that make society management effortless and efficient.</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm feature-card animate-on-scroll">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-box me-3">
+                                <i class="fas fa-file-invoice text-primary fa-2x"></i>
+                            </div>
+                            <h3 class="h5 card-title mb-0">Account & Documentation</h3>
+                        </div>
+                        <p class="card-text text-muted">View a user-friendly dashboard for fee payments and document access, ensuring transparency and ease of use.</p>
+                        <ul class="list-unstyled text-muted">
+                            <li><i class="fas fa-check text-success me-2"></i>Digital document storage</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Payment tracking & receipts</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Account statements</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm feature-card animate-on-scroll">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-box me-3">
+                                <i class="fas fa-tools text-primary fa-2x"></i>
+                            </div>
+                            <h3 class="h5 card-title mb-0">Maintenance & Repair</h3>
+                        </div>
+                        <p class="card-text text-muted">Track repair requests and preventive maintenance schedules, reducing downtime and enhancing service quality.</p>
+                        <ul class="list-unstyled text-muted">
+                            <li><i class="fas fa-check text-success me-2"></i>Request tracking system</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Vendor management</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Scheduled maintenance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm feature-card animate-on-scroll">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-box me-3">
+                                <i class="fas fa-chart-pie text-primary fa-2x"></i>
+                            </div>
+                            <h3 class="h5 card-title mb-0">Financial Management</h3>
+                        </div>
+                        <p class="card-text text-muted">Access budgeting tools, real-time expense tracking, and detailed financial reports for a complete overview.</p>
+                        <ul class="list-unstyled text-muted">
+                            <li><i class="fas fa-check text-success me-2"></i>Budget planning tools</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Expense tracking</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Financial reporting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm feature-card animate-on-scroll">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-box me-3">
+                                <i class="fas fa-users text-primary fa-2x"></i>
+                            </div>
+                            <h3 class="h5 card-title mb-0">Resident Communication</h3>
+                        </div>
+                        <p class="card-text text-muted">Stay informed with our dynamic notice board, live chat, and an online portal for all society interactions.</p>
+                        <ul class="list-unstyled text-muted">
+                            <li><i class="fas fa-check text-success me-2"></i>Digital notice board</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Community messaging</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Event management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm feature-card animate-on-scroll">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-box me-3">
+                                <i class="fas fa-shield-alt text-primary fa-2x"></i>
+                            </div>
+                            <h3 class="h5 card-title mb-0">Security Management</h3>
+                        </div>
+                        <p class="card-text text-muted">Manage legal compliance, conflict resolution, and advanced visitor management systems seamlessly.</p>
+                        <ul class="list-unstyled text-muted">
+                            <li><i class="fas fa-check text-success me-2"></i>Visitor tracking</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Emergency protocols</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Access control</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm feature-card animate-on-scroll">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-box me-3">
+                                <i class="fas fa-calendar-alt text-primary fa-2x"></i>
+                            </div>
+                            <h3 class="h5 card-title mb-0">Amenity Booking</h3>
+                        </div>
+                        <p class="card-text text-muted">Easily reserve common facilities, track availability, and manage booking conflicts efficiently.</p>
+                        <ul class="list-unstyled text-muted">
+                            <li><i class="fas fa-check text-success me-2"></i>Real-time availability</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Online booking system</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Usage reporting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="{{ url_for('features') }}" class="btn btn-primary btn-lg">
+                <i class="fas fa-th-list me-2"></i>View All Features
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works Section -->
+<section class="py-5" id="how-it-works">
+    <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-8 animate-on-scroll">
+                <h2 class="display-5 fw-bold mb-3">How It Works</h2>
+                <p class="lead text-muted">Our platform is designed to be intuitive for every stakeholder.</p>
+            </div>
+        </div>
+        
+        <div class="row g-4 align-items-center">
+            <div class="col-md-4 mb-4 mb-md-0">
+                <div class="card border-0 shadow-sm h-100 animate-on-scroll">
+                    <div class="card-body text-center p-4">
+                        <div class="icon-box rounded-circle bg-primary text-white d-inline-flex justify-content-center align-items-center mb-4" style="width: 80px; height: 80px;">
+                            <i class="fas fa-user fa-2x"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Residents</h3>
+                        <p class="text-muted">Access payment portals, document repositories, and service requests with ease.</p>
+                        <ul class="list-unstyled text-start text-muted">
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Pay maintenance fees online</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Submit maintenance requests</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Access community notices</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i>Book amenities & facilities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4 mb-md-0">
+                <div class="card border-0 shadow-sm h-100 animate-on-scroll">
+                    <div class="card-body text-center p-4">
+                        <div class="icon-box rounded-circle bg-primary text-white d-inline-flex justify-content-center align-items-center mb-4" style="width: 80px; height: 80px;">
+                            <i class="fas fa-user-tie fa-2x"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Administrators</h3>
+                        <p class="text-muted">Manage users, vendors, and finances through role-based dashboards and analytics.</p>
+                        <ul class="list-unstyled text-start text-muted">
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Track payment collections</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Manage maintenance tasks</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Generate financial reports</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i>Communicate with residents</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm h-100 animate-on-scroll">
+                    <div class="card-body text-center p-4">
+                        <div class="icon-box rounded-circle bg-primary text-white d-inline-flex justify-content-center align-items-center mb-4" style="width: 80px; height: 80px;">
+                            <i class="fas fa-user-shield fa-2x"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Security Teams</h3>
+                        <p class="text-muted">Utilize advanced visitor verification, real-time alerts, and GPS tracking for enhanced safety.</p>
+                        <ul class="list-unstyled text-start text-muted">
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Verify and log visitors</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Manage access permissions</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Receive security alerts</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i>Monitor premises remotely</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="bg-light py-5" id="testimonials">
+    <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-8 animate-on-scroll">
+                <h2 class="display-5 fw-bold mb-3">What Our Users Say</h2>
+                <p class="lead text-muted">Hear from the societies and managers who have transformed their operations.</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card border-0 shadow-sm testimonial-card animate-on-scroll">
+                    <div class="card-body p-4">
+                        <div class="d-flex mb-4">
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="lead fst-italic mb-4">"Since integrating this platform, our management processes have become far more transparent and efficient. Residents appreciate the easy access to information."</p>
+                        <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0">
+                                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                    <span class="text-white fw-bold">RC</span>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h5 class="mb-0">Rajesh Chawla</h5>
+                                <p class="text-muted mb-0">Society President, Green Valley Apartments</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 mb-4">
+                <div class="card border-0 shadow-sm testimonial-card animate-on-scroll">
+                    <div class="card-body p-4">
+                        <div class="d-flex mb-4">
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="lead fst-italic mb-4">"Managing maintenance requests and vendor coordination has never been simpler. This demo convinced us that this is the future of society management."</p>
+                        <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0">
+                                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                    <span class="text-white fw-bold">SP</span>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h5 class="mb-0">Sarita Patel</h5>
+                                <p class="text-muted mb-0">Property Manager, Sunshine Heights</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5 bg-primary text-white" id="cta">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-8 text-center animate-on-scroll">
+                <h2 class="display-5 fw-bold mb-4">Ready to Transform Your Society Management?</h2>
+                <p class="lead mb-4">Join hundreds of societies who are already experiencing the benefits of our platform.</p>
+                <button class="btn btn-light btn-lg me-3 mb-3 mb-md-0" data-bs-toggle="modal" data-bs-target="#contactModal">
+                    <i class="fas fa-paper-plane me-2"></i>Get in Touch
+                </button>
+                <a href="{{ url_for('demo') }}" class="btn btn-outline-light btn-lg">
+                    <i class="fas fa-laptop me-2"></i>Try Interactive Demo
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Video Modal -->
+<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="videoModalLabel">Society Management System Demo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0">
+                <!-- Embed a placeholder for the video -->
+                <div class="ratio ratio-16x9">
+                    <iframe id="demoVideo" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Society Management System Demo" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

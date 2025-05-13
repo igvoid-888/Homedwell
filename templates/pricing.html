@@ -1,0 +1,352 @@
+{% extends "base.html" %}
+
+{% block title %}Pricing - Society Management System{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="bg-primary text-white py-5 mt-5">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-8 animate-on-scroll">
+                <h1 class="display-4 fw-bold mb-4">Simple, Transparent Pricing</h1>
+                <p class="lead">Choose the plan that's right for your community with no hidden fees.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Table Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8 text-center">
+                <div class="btn-group" role="group" aria-label="Billing frequency">
+                    <button type="button" class="btn btn-outline-primary active">Monthly</button>
+                    <button type="button" class="btn btn-outline-primary">Annual (20% off)</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row g-4 justify-content-center">
+            <!-- Basic Plan -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm animate-on-scroll">
+                    <div class="card-header bg-light text-center border-0 py-4">
+                        <h4 class="my-0 fw-bold">Basic</h4>
+                    </div>
+                    <div class="card-body text-center">
+                        <h1 class="card-title mb-4">₹ 2,999<small class="text-muted fw-light">/month</small></h1>
+                        <p class="text-muted mb-4">Perfect for small societies with up to 50 units</p>
+                        <ul class="list-unstyled text-start mb-4">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Financial Management</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Maintenance Requests</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Basic Communication Tools</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>10 GB Document Storage</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Email Support</li>
+                            <li class="mb-2 text-muted"><i class="fas fa-times text-danger me-2"></i>Visitor Management</li>
+                            <li class="mb-2 text-muted"><i class="fas fa-times text-danger me-2"></i>Advanced Reporting</li>
+                            <li class="mb-2 text-muted"><i class="fas fa-times text-danger me-2"></i>API Access</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 text-center pt-0 pb-4">
+                        <a href="#" class="btn btn-outline-primary btn-lg d-block">Select Plan</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Standard Plan -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 border-0 shadow position-relative animate-on-scroll">
+                    <div class="ribbon position-absolute"><span class="bg-primary text-white">Most Popular</span></div>
+                    <div class="card-header bg-primary text-white text-center border-0 py-4">
+                        <h4 class="my-0 fw-bold">Standard</h4>
+                    </div>
+                    <div class="card-body text-center">
+                        <h1 class="card-title mb-4">₹ 5,999<small class="text-muted fw-light">/month</small></h1>
+                        <p class="text-muted mb-4">Great for medium-sized societies with up to 150 units</p>
+                        <ul class="list-unstyled text-start mb-4">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Everything in Basic</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Visitor Management</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Advanced Communication Tools</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>50 GB Document Storage</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Amenity Booking System</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Priority Email Support</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Basic Reporting</li>
+                            <li class="mb-2 text-muted"><i class="fas fa-times text-danger me-2"></i>API Access</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 text-center pt-0 pb-4">
+                        <a href="#" class="btn btn-primary btn-lg d-block">Select Plan</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Premium Plan -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm animate-on-scroll">
+                    <div class="card-header bg-light text-center border-0 py-4">
+                        <h4 class="my-0 fw-bold">Premium</h4>
+                    </div>
+                    <div class="card-body text-center">
+                        <h1 class="card-title mb-4">₹ 9,999<small class="text-muted fw-light">/month</small></h1>
+                        <p class="text-muted mb-4">Ideal for large societies with unlimited units</p>
+                        <ul class="list-unstyled text-start mb-4">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Everything in Standard</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Advanced Security Features</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Advanced Analytics & Reporting</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Unlimited Document Storage</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>API Access</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Dedicated Account Manager</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>24/7 Phone & Email Support</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Custom Integration Options</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 text-center pt-0 pb-4">
+                        <a href="#" class="btn btn-outline-primary btn-lg d-block">Select Plan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Enterprise Plan -->
+        <div class="row justify-content-center mt-4">
+            <div class="col-lg-10">
+                <div class="card border-0 shadow-sm animate-on-scroll">
+                    <div class="card-body p-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <h3 class="mb-3">Enterprise Plan</h3>
+                                <p class="text-muted mb-4">Custom solutions for large township projects, builder associations, and property management companies.</p>
+                                <ul class="list-unstyled d-flex flex-wrap mb-0">
+                                    <li class="me-4 mb-2"><i class="fas fa-check text-success me-2"></i>Custom Features</li>
+                                    <li class="me-4 mb-2"><i class="fas fa-check text-success me-2"></i>White Labeling</li>
+                                    <li class="me-4 mb-2"><i class="fas fa-check text-success me-2"></i>Custom Integrations</li>
+                                    <li class="me-4 mb-2"><i class="fas fa-check text-success me-2"></i>Dedicated Support Team</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 text-center text-md-end mt-4 mt-md-0">
+                                <a href="#" class="btn btn-outline-primary btn-lg" data-bs-toggle="modal" data-bs-target="#contactModal">Contact Sales</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Feature Comparison Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-8 animate-on-scroll">
+                <h2 class="display-5 fw-bold mb-3">Feature Comparison</h2>
+                <p class="lead text-muted">Detailed breakdown of what's included in each plan.</p>
+            </div>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead class="table-light">
+                            <tr>
+                                <th scope="col">Feature</th>
+                                <th scope="col" class="text-center">Basic</th>
+                                <th scope="col" class="text-center">Standard</th>
+                                <th scope="col" class="text-center">Premium</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Number of Units</th>
+                                <td class="text-center">Up to 50</td>
+                                <td class="text-center">Up to 150</td>
+                                <td class="text-center">Unlimited</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Financial Management</th>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Maintenance Requests</th>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Document Storage</th>
+                                <td class="text-center">10 GB</td>
+                                <td class="text-center">50 GB</td>
+                                <td class="text-center">Unlimited</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Notice Board</th>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Visitor Management</th>
+                                <td class="text-center"><i class="fas fa-times text-danger"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Amenity Booking</th>
+                                <td class="text-center"><i class="fas fa-times text-danger"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Community Forums</th>
+                                <td class="text-center"><i class="fas fa-times text-danger"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Analytics & Reporting</th>
+                                <td class="text-center">Basic</td>
+                                <td class="text-center">Standard</td>
+                                <td class="text-center">Advanced</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">API Access</th>
+                                <td class="text-center"><i class="fas fa-times text-danger"></i></td>
+                                <td class="text-center"><i class="fas fa-times text-danger"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Support</th>
+                                <td class="text-center">Email</td>
+                                <td class="text-center">Priority Email</td>
+                                <td class="text-center">24/7 Phone & Email</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Mobile App</th>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-8 animate-on-scroll">
+                <h2 class="display-5 fw-bold mb-3">Frequently Asked Questions</h2>
+                <p class="lead text-muted">Get answers to common questions about our pricing and plans.</p>
+            </div>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="accordion" id="pricingFAQ">
+                    <div class="accordion-item border-0 mb-3 shadow-sm">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                Can I switch plans later?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#pricingFAQ">
+                            <div class="accordion-body">
+                                Yes, you can upgrade or downgrade your plan at any time. When upgrading, the new features will be available immediately. When downgrading, the changes will take effect at the start of your next billing cycle.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item border-0 mb-3 shadow-sm">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Are there any setup or implementation fees?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#pricingFAQ">
+                            <div class="accordion-body">
+                                There are no setup fees for our Basic and Standard plans. The Premium plan includes free implementation assistance. Enterprise plans may have setup fees depending on the complexity of customization required.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item border-0 mb-3 shadow-sm">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Is there a free trial available?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#pricingFAQ">
+                            <div class="accordion-body">
+                                Yes, we offer a 14-day free trial for all our plans. No credit card is required to start your trial, and you can explore all features of your chosen plan during this period.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item border-0 mb-3 shadow-sm">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                How is the number of units calculated?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#pricingFAQ">
+                            <div class="accordion-body">
+                                Units include all residential apartments, commercial spaces, and other properties within your society that require management. Common areas and facilities are not counted as separate units.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item border-0 mb-3 shadow-sm">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                Can I get a discount for annual billing?
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#pricingFAQ">
+                            <div class="accordion-body">
+                                Yes, we offer a 20% discount when you choose annual billing for any of our plans. This is a great way to save and secure your service for the entire year.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5 bg-primary text-white">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-8 text-center animate-on-scroll">
+                <h2 class="display-5 fw-bold mb-4">Ready to Get Started?</h2>
+                <p class="lead mb-4">Choose the plan that's right for your community or contact us for a custom solution.</p>
+                <button class="btn btn-light btn-lg me-3 mb-3 mb-md-0" data-bs-toggle="modal" data-bs-target="#contactModal">
+                    <i class="fas fa-headset me-2"></i>Talk to Sales
+                </button>
+                <a href="{{ url_for('demo') }}" class="btn btn-outline-light btn-lg">
+                    <i class="fas fa-play-circle me-2"></i>Try Demo
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Money-back Guarantee Banner -->
+<div class="bg-light py-3">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-auto text-center">
+                <p class="mb-0"><i class="fas fa-shield-alt text-primary me-2"></i>30-day money-back guarantee on all plans</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

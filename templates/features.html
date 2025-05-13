@@ -1,0 +1,315 @@
+{% extends "base.html" %}
+
+{% block title %}Features - Society Management System{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="bg-primary text-white py-5 mt-5">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-8 animate-on-scroll">
+                <h1 class="display-4 fw-bold mb-4">Comprehensive Features</h1>
+                <p class="lead">Explore the powerful tools that make our Society Management System the choice of leading residential communities.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Overview Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-10">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <ul class="nav nav-pills nav-justified flex-column flex-md-row mb-4" id="feature-tabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#financial" type="button" role="tab">Financial Management</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#maintenance" type="button" role="tab">Maintenance</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#communication" type="button" role="tab">Communication</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#security" type="button" role="tab">Security</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#amenities" type="button" role="tab">Amenities</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content p-3" id="feature-tabsContent">
+                            <!-- Financial Management Tab -->
+                            <div class="tab-pane fade show active" id="financial" role="tabpanel">
+                                <div class="row align-items-center">
+                                    <div class="col-md-6 mb-4 mb-md-0">
+                                        <h3 class="h4 mb-3">Financial Management</h3>
+                                        <p class="text-muted">Comprehensive tools for managing society finances with complete transparency and efficiency.</p>
+                                        <ul class="list-unstyled mb-4">
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Online payment collection & tracking</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Automated billing & receipts</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Budget planning & expense tracking</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Financial reports & analytics</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Payment due reminders</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Fund allocation & management</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Vendor payment processing</li>
+                                        </ul>
+                                        <a href="#" class="btn btn-primary">Learn More</a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card border-0 bg-light">
+                                            <div class="card-body p-4 text-center">
+                                                <i class="fas fa-chart-pie text-primary fa-4x mb-4"></i>
+                                                <h4 class="mb-3">Financial Dashboard</h4>
+                                                <p class="text-muted mb-4">Get a complete overview of your society's financial health with detailed insights and projections.</p>
+                                                <img src="https://via.placeholder.com/450x300" alt="Financial Dashboard" class="img-fluid rounded shadow">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Maintenance Tab -->
+                            <div class="tab-pane fade" id="maintenance" role="tabpanel">
+                                <div class="row align-items-center">
+                                    <div class="col-md-6 mb-4 mb-md-0">
+                                        <h3 class="h4 mb-3">Maintenance Management</h3>
+                                        <p class="text-muted">Streamline all maintenance operations with our comprehensive request tracking system.</p>
+                                        <ul class="list-unstyled mb-4">
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Online maintenance request submission</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Request tracking & status updates</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Vendor assignment & management</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Preventive maintenance scheduling</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Service quality rating system</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Maintenance history tracking</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Asset management & inventory</li>
+                                        </ul>
+                                        <a href="#" class="btn btn-primary">Learn More</a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card border-0 bg-light">
+                                            <div class="card-body p-4 text-center">
+                                                <i class="fas fa-tools text-primary fa-4x mb-4"></i>
+                                                <h4 class="mb-3">Maintenance Portal</h4>
+                                                <p class="text-muted mb-4">Track all maintenance requests and scheduled repairs from a single intuitive dashboard.</p>
+                                                <img src="https://via.placeholder.com/450x300" alt="Maintenance Dashboard" class="img-fluid rounded shadow">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Communication Tab -->
+                            <div class="tab-pane fade" id="communication" role="tabpanel">
+                                <div class="row align-items-center">
+                                    <div class="col-md-6 mb-4 mb-md-0">
+                                        <h3 class="h4 mb-3">Communication Tools</h3>
+                                        <p class="text-muted">Foster community interaction with our comprehensive communication platform.</p>
+                                        <ul class="list-unstyled mb-4">
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Digital notice board</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Multi-channel notifications (SMS, Email, App)</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Community forum & discussion boards</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Event announcements & RSVPs</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Polls & surveys for resident feedback</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Resident directory (with privacy controls)</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Document sharing & archiving</li>
+                                        </ul>
+                                        <a href="#" class="btn btn-primary">Learn More</a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card border-0 bg-light">
+                                            <div class="card-body p-4 text-center">
+                                                <i class="fas fa-comments text-primary fa-4x mb-4"></i>
+                                                <h4 class="mb-3">Communication Center</h4>
+                                                <p class="text-muted mb-4">Keep residents informed and engaged with easy-to-use communication tools.</p>
+                                                <img src="https://via.placeholder.com/450x300" alt="Communication Dashboard" class="img-fluid rounded shadow">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Security Tab -->
+                            <div class="tab-pane fade" id="security" role="tabpanel">
+                                <div class="row align-items-center">
+                                    <div class="col-md-6 mb-4 mb-md-0">
+                                        <h3 class="h4 mb-3">Security Management</h3>
+                                        <p class="text-muted">Enhance community safety with our advanced security features.</p>
+                                        <ul class="list-unstyled mb-4">
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Visitor management system</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Digital entry passes & QR codes</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Pre-approved visitor lists</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Security staff management</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Incident reporting & tracking</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Emergency response protocols</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Security camera integration options</li>
+                                        </ul>
+                                        <a href="#" class="btn btn-primary">Learn More</a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card border-0 bg-light">
+                                            <div class="card-body p-4 text-center">
+                                                <i class="fas fa-shield-alt text-primary fa-4x mb-4"></i>
+                                                <h4 class="mb-3">Security Portal</h4>
+                                                <p class="text-muted mb-4">Monitor and manage all security aspects from a centralized dashboard.</p>
+                                                <img src="https://via.placeholder.com/450x300" alt="Security Dashboard" class="img-fluid rounded shadow">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Amenities Tab -->
+                            <div class="tab-pane fade" id="amenities" role="tabpanel">
+                                <div class="row align-items-center">
+                                    <div class="col-md-6 mb-4 mb-md-0">
+                                        <h3 class="h4 mb-3">Amenity Management</h3>
+                                        <p class="text-muted">Streamline the booking and management of society facilities and amenities.</p>
+                                        <ul class="list-unstyled mb-4">
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Online booking system</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Real-time availability calendar</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Fee collection for paid amenities</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Usage policies & agreements</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Maintenance scheduling</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Usage analytics & reporting</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Feedback collection system</li>
+                                        </ul>
+                                        <a href="#" class="btn btn-primary">Learn More</a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card border-0 bg-light">
+                                            <div class="card-body p-4 text-center">
+                                                <i class="fas fa-calendar-alt text-primary fa-4x mb-4"></i>
+                                                <h4 class="mb-3">Booking Dashboard</h4>
+                                                <p class="text-muted mb-4">Manage all community spaces and amenities with our intuitive booking system.</p>
+                                                <img src="https://via.placeholder.com/450x300" alt="Amenities Dashboard" class="img-fluid rounded shadow">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Additional Features Section -->
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-8 animate-on-scroll">
+                <h2 class="display-5 fw-bold mb-3">More Powerful Features</h2>
+                <p class="lead text-muted">Discover even more ways our system enhances community management.</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm feature-card animate-on-scroll">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-box me-3">
+                                <i class="fas fa-mobile-alt text-primary fa-2x"></i>
+                            </div>
+                            <h3 class="h5 card-title mb-0">Mobile App</h3>
+                        </div>
+                        <p class="card-text text-muted">Access all features on the go with our dedicated mobile application for iOS and Android.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm feature-card animate-on-scroll">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-box me-3">
+                                <i class="fas fa-bell text-primary fa-2x"></i>
+                            </div>
+                            <h3 class="h5 card-title mb-0">Customizable Alerts</h3>
+                        </div>
+                        <p class="card-text text-muted">Set up personalized notifications for important events, payments, and community announcements.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm feature-card animate-on-scroll">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-box me-3">
+                                <i class="fas fa-chart-bar text-primary fa-2x"></i>
+                            </div>
+                            <h3 class="h5 card-title mb-0">Advanced Analytics</h3>
+                        </div>
+                        <p class="card-text text-muted">Gain insights into community operations with comprehensive data analysis and visual reports.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm feature-card animate-on-scroll">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-box me-3">
+                                <i class="fas fa-user-cog text-primary fa-2x"></i>
+                            </div>
+                            <h3 class="h5 card-title mb-0">Role-Based Access</h3>
+                        </div>
+                        <p class="card-text text-muted">Control information access with customizable permission levels for different user roles.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm feature-card animate-on-scroll">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-box me-3">
+                                <i class="fas fa-file-invoice-dollar text-primary fa-2x"></i>
+                            </div>
+                            <h3 class="h5 card-title mb-0">Tax Documentation</h3>
+                        </div>
+                        <p class="card-text text-muted">Generate and manage tax-related documents for society finances and resident payments.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm feature-card animate-on-scroll">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-box me-3">
+                                <i class="fas fa-handshake text-primary fa-2x"></i>
+                            </div>
+                            <h3 class="h5 card-title mb-0">Vendor Management</h3>
+                        </div>
+                        <p class="card-text text-muted">Maintain a database of vendors, track contracts, and manage service agreements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5 bg-primary text-white">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-8 text-center animate-on-scroll">
+                <h2 class="display-5 fw-bold mb-4">Experience These Features In Action</h2>
+                <p class="lead mb-4">Schedule a personalized demo to see how these features can transform your society management.</p>
+                <button class="btn btn-light btn-lg me-3 mb-3 mb-md-0" data-bs-toggle="modal" data-bs-target="#contactModal">
+                    <i class="fas fa-calendar-check me-2"></i>Schedule a Demo
+                </button>
+                <a href="{{ url_for('pricing') }}" class="btn btn-outline-light btn-lg">
+                    <i class="fas fa-tag me-2"></i>View Pricing Plans
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

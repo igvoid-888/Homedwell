@@ -1,0 +1,126 @@
+/* Custom styles that extend Bootstrap */
+
+/* Hero section styling */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    color: #fff;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Feature card hover effect */
+.feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Testimonial styling */
+.testimonial-card {
+    border-left: 4px solid var(--bs-primary);
+    background-color: rgba(0, 123, 255, 0.05);
+}
+
+/* Demo section styling */
+.demo-section {
+    background-color: #f8f9fa;
+    padding: 4rem 0;
+}
+
+/* Section spacing */
+section {
+    padding: 5rem 0;
+}
+
+/* Footer styling */
+.footer {
+    background-color: #212529;
+    color: rgba(255,255,255,.55);
+    padding: 3rem 0;
+}
+
+/* Animation for elements */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom heading font weight */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+/* Button hover effect */
+.btn-primary, .btn-outline-primary {
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover, .btn-outline-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal animation */
+.modal.fade .modal-dialog {
+    transition: transform 0.3s ease-out;
+    transform: translate(0, -50px);
+}
+
+.modal.show .modal-dialog {
+    transform: none;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 70vh;
+    }
+    
+    section {
+        padding: 3rem 0;
+    }
+    
+    .feature-card:hover {
+        transform: none;
+    }
+}
