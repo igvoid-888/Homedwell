@@ -1,5 +1,48 @@
 /* Custom styles that extend Bootstrap */
 
+/* Theme Custom Colors - Homedwell Branding */
+:root {
+    --hd-teal: #4abfbf;
+    --hd-dark-teal: #2a8e8e;
+    --hd-lighter-teal: #a7e4e4;
+    --hd-gray: #6c757d;
+    --hd-dark-gray: #343a40;
+    --hd-light-gray: #e9ecef;
+}
+
+/* Override Bootstrap variables */
+.bg-primary {
+    background-color: var(--hd-teal) !important;
+}
+
+.bg-dark {
+    background-color: var(--hd-dark-gray) !important;
+}
+
+.text-primary {
+    color: var(--hd-teal) !important;
+}
+
+.btn-primary {
+    background-color: var(--hd-teal) !important;
+    border-color: var(--hd-teal) !important;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--hd-dark-teal) !important;
+    border-color: var(--hd-dark-teal) !important;
+}
+
+.btn-outline-primary {
+    color: var(--hd-teal) !important;
+    border-color: var(--hd-teal) !important;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+    background-color: var(--hd-teal) !important;
+    color: white !important;
+}
+
 /* Hero section styling */
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
@@ -34,8 +77,8 @@ html {
 
 /* Testimonial styling */
 .testimonial-card {
-    border-left: 4px solid var(--bs-primary);
-    background-color: rgba(0, 123, 255, 0.05);
+    border-left: 4px solid var(--hd-teal);
+    background-color: rgba(74, 191, 191, 0.05);
 }
 
 /* Demo section styling */
@@ -51,9 +94,29 @@ section {
 
 /* Footer styling */
 .footer {
-    background-color: #212529;
+    background-color: var(--hd-dark-gray);
     color: rgba(255,255,255,.55);
     padding: 3rem 0;
+}
+
+/* Logo styling */
+.logo-img {
+    height: 40px;
+    width: auto;
+}
+
+/* Navbar customization */
+.navbar-dark {
+    background-color: var(--hd-dark-gray) !important;
+}
+
+.nav-link.active {
+    color: var(--hd-teal) !important;
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    color: var(--hd-lighter-teal) !important;
 }
 
 /* Animation for elements */

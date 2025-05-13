@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <!-- Circle background -->
+  <circle cx="150" cy="150" r="145" fill="white" stroke="#4abfbf" stroke-width="10"/>
+  
+  <!-- Roof part -->
+  <path d="M50,150 L150,70 L250,150" stroke="#4abfbf" stroke-width="15" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- H letter -->
+  <rect x="80" y="150" width="20" height="80" fill="#6c757d"/>
+  <rect x="140" y="150" width="20" height="80" fill="#6c757d"/>
+  <rect x="80" y="180" width="80" height="20" fill="#6c757d"/>
+  
+  <!-- D letter -->
+  <path d="M170,150 L170,230 L210,230 C240,230 240,150 210,150 Z" fill="#6c757d"/>
+  
+  <!-- Dots on the H -->
+  <circle cx="90" cy="160" r="3" fill="white"/>
+  <circle cx="90" cy="175" r="3" fill="white"/>
+  <circle cx="90" cy="205" r="3" fill="white"/>
+  <circle cx="90" cy="220" r="3" fill="white"/>
+  
+  <circle cx="150" cy="160" r="3" fill="white"/>
+  <circle cx="150" cy="175" r="3" fill="white"/>
+  <circle cx="150" cy="205" r="3" fill="white"/>
+  <circle cx="150" cy="220" r="3" fill="white"/>
+  
+  <!-- Dots on the D -->
+  <circle cx="230" cy="155" r="3" fill="white"/>
+  <circle cx="238" cy="170" r="3" fill="white"/>
+  <circle cx="238" cy="190" r="3" fill="white"/>
+  <circle cx="238" cy="210" r="3" fill="white"/>
+  <circle cx="230" cy="225" r="3" fill="white"/>
+  <circle cx="215" cy="225" r="3" fill="white"/>
+  <circle cx="195" cy="225" r="3" fill="white"/>
+</svg>
