@@ -119,16 +119,135 @@ section {
     color: var(--hd-lighter-teal) !important;
 }
 
-/* Animation for elements */
-.animate-on-scroll {
+/* Enhanced Animation System */
+/* Base animation classes */
+.animate-on-scroll, .slide-up, .slide-left, .slide-right, .scale-in, .stagger-child {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform, opacity;
 }
 
-.animate-on-scroll.show {
+/* Fade in animation */
+.animate-on-scroll {
+    transform: translateY(30px);
+}
+
+.animate-on-scroll.animate-visible, .animate-on-scroll.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Slide animations */
+.slide-up {
+    transform: translateY(50px);
+}
+
+.slide-up.animate-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-left {
+    transform: translateX(-50px);
+}
+
+.slide-left.animate-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-right {
+    transform: translateX(50px);
+}
+
+.slide-right.animate-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Scale animation */
+.scale-in {
+    transform: scale(0.8);
+}
+
+.scale-in.animate-visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Stagger animations */
+.stagger-child {
+    transform: translateY(30px);
+    transition-delay: 0s;
+}
+
+.stagger-child.animate-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Enhanced navbar scroll effect */
+.navbar {
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.navbar-scrolled {
+    background-color: rgba(52, 58, 64, 0.95) !important;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Parallax container */
+.parallax-container {
+    overflow: hidden;
+    position: relative;
+}
+
+/* Counter animation */
+.counter {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--hd-teal);
+    transition: all 0.3s ease;
+}
+
+/* Progress bars */
+.progress-bar-animated {
+    width: 0%;
+    transition: width 2s ease-in-out;
+}
+
+.progress-bar-animated.animate-visible {
+    width: var(--target-width, 100%);
+}
+
+/* Card hover enhancements */
+.feature-card, .testimonial-card {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.feature-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(74, 191, 191, 0.15);
+}
+
+/* Smooth section reveals */
+section {
+    position: relative;
+}
+
+.section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--hd-teal), transparent);
+    margin: 4rem 0;
+    opacity: 0;
+    transform: scaleX(0);
+    transition: all 1s ease;
+}
+
+.section-divider.animate-visible {
+    opacity: 1;
+    transform: scaleX(1);
 }
 
 /* Custom heading font weight */

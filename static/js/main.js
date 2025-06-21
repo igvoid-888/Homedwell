@@ -14,22 +14,104 @@ document.addEventListener('DOMContentLoaded', function() {
         }, false);
     });
     
-    // Animation on scroll
-    const animateElements = document.querySelectorAll('.animate-on-scroll');
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show');
-            }
+    // Enhanced scroll-triggered animations
+    const initScrollAnimations = () => {
+        // Basic fade-in animations
+        const fadeElements = document.querySelectorAll('.animate-on-scroll');
+        
+        // Slide animations
+        const slideUpElements = document.querySelectorAll('.slide-up');
+        const slideLeftElements = document.querySelectorAll('.slide-left');
+        const slideRightElements = document.querySelectorAll('.slide-right');
+        
+        // Stagger animations for groups
+        const staggerElements = document.querySelectorAll('.stagger-animation');
+        
+        // Scale animations
+        const scaleElements = document.querySelectorAll('.scale-in');
+        
+        // Create intersection observer with different thresholds
+        const createObserver = (threshold = 0.1, rootMargin = '0px') => {
+            return new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-visible');
+                        
+                        // Handle stagger animations
+                        if (entry.target.classList.contains('stagger-parent')) {
+                            const children = entry.target.querySelectorAll('.stagger-child');
+                            children.forEach((child, index) => {
+                                setTimeout(() => {
+                                    child.classList.add('animate-visible');
+                                }, index * 100);
+                            });
+                        }
+                    }
+                });
+            }, {
+                threshold: threshold,
+                rootMargin: rootMargin
+            });
+        };
+        
+        // Main observer for most animations
+        const mainObserver = createObserver(0.1, '-50px');
+        
+        // Observe all animated elements
+        [...fadeElements, ...slideUpElements, ...slideLeftElements, 
+         ...slideRightElements, ...staggerElements, ...scaleElements].forEach(element => {
+            mainObserver.observe(element);
         });
-    }, {
-        threshold: 0.1
-    });
+        
+        // Hero section parallax effect
+        const hero = document.querySelector('.hero');
+        if (hero) {
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const rate = scrolled * -0.5;
+                hero.style.transform = `translateY(${rate}px)`;
+            });
+        }
+        
+        // Navbar background opacity on scroll
+        const navbar = document.querySelector('.navbar');
+        if (navbar) {
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                if (scrolled > 100) {
+                    navbar.classList.add('navbar-scrolled');
+                } else {
+                    navbar.classList.remove('navbar-scrolled');
+                }
+            });
+        }
+        
+        // Counter animations for numbers
+        const counterElements = document.querySelectorAll('.counter');
+        const counterObserver = createObserver(0.5);
+        
+        counterElements.forEach(counter => {
+            counterObserver.observe(counter);
+            counter.addEventListener('animationstart', () => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 2000;
+                const increment = target / (duration / 16);
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    counter.textContent = Math.floor(current);
+                }, 16);
+            });
+        });
+    };
     
-    animateElements.forEach(element => {
-        observer.observe(element);
-    });
+    // Initialize animations
+    initScrollAnimations();
     
     // Modal functionality
     const contactButtons = document.querySelectorAll('[data-bs-target="#contactModal"]');
