@@ -138,44 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Demo video functionality
-    const demoVideoButton = document.getElementById('demoVideoButton');
-    if (demoVideoButton) {
-        demoVideoButton.addEventListener('click', function() {
-            const videoModal = new bootstrap.Modal(document.getElementById('videoModal'));
-            videoModal.show();
-            
-            // Start video when modal is shown
-            const videoElement = document.getElementById('demoVideo');
-            document.getElementById('videoModal').addEventListener('shown.bs.modal', function() {
-                if (videoElement) {
-                    videoElement.play();
-                }
-            });
-            
-            // Pause video when modal is hidden
-            document.getElementById('videoModal').addEventListener('hidden.bs.modal', function() {
-                if (videoElement) {
-                    videoElement.pause();
-                }
-            });
-        });
-    }
-    
-    // Interactive demo tabs
-    const demoTabs = document.querySelectorAll('.demo-tab');
-    demoTabs.forEach(tab => {
-        tab.addEventListener('click', function() {
-            demoTabs.forEach(t => t.classList.remove('active'));
-            this.classList.add('active');
-            
-            const featureId = this.getAttribute('data-feature');
-            document.querySelectorAll('.demo-feature').forEach(feature => {
-                feature.classList.remove('active');
-            });
-            document.getElementById(featureId).classList.add('active');
-        });
-    });
+
     
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

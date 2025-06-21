@@ -59,10 +59,7 @@ def pricing():
 def contact():
     return render_template('contact.html')
 
-# Route for demo page
-@app.route('/demo')
-def demo():
-    return render_template('demo.html')
+
 
 # Route for form submission
 @app.route('/submit', methods=['POST'])
