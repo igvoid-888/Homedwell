@@ -49,10 +49,7 @@ def index():
 def features():
     return render_template('features.html')
 
-# Route for pricing page
-@app.route('/pricing')
-def pricing():
-    return render_template('pricing.html')
+
 
 # Route for contact page
 @app.route('/contact')

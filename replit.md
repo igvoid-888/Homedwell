@@ -104,6 +104,8 @@ This is a web-based Society Management System built with Flask and SQLAlchemy, d
 - June 21, 2025: Removed Demo section, replaced with Google form "Book Demo" links
 - June 21, 2025: Updated branding to bold "Homedwell Properties" throughout site
 - June 21, 2025: Updated contact details with authentic business information (phone numbers: 9137873473, 9167476162; address: Chinchpokli Mumbai)
+- June 23, 2025: Removed "Get Started" button from navigation
+- June 23, 2025: Removed Pricing section and pricing navigation completely
 
 ## User Preferences
 
